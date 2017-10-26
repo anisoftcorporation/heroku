@@ -54,14 +54,14 @@ if(!err){
 	
 	if(tweet.favorited!="false")
 		{
-		console.log('in if');
+	//	console.log('in if');
 	     myBot.post('favorites/create', {id: tweet.id_str}, function(error, response){
         // if there was an error while 'favorite'
         if(error){
-          console.log('CANNOT BE FAVORITE... Error'+error);
+        //  console.log('CANNOT BE FAVORITE... Error'+error);
         }
         else{
-          console.log('FAVORITED... Success!!!');
+     //     console.log('FAVORITED... Success!!!');
         }
 	
 	});
@@ -93,7 +93,7 @@ if(!darktechieErr){
 	     myBot.post('favorites/create', {id: darkTweet.id_str}, function(error, response){
         // if there was an error while 'favorite'
         if(error){
-         console.log('CANNOT BE FAVORITE... Error'+error);
+        // console.log('CANNOT BE FAVORITE... Error'+error);
         }
         else{
     //      console.log('FAVORITED... Success!!!');

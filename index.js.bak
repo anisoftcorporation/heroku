@@ -51,7 +51,7 @@ if(!err){
 	 var tweet = data.statuses[i];
 	// console.log(data.statuses[0]);
 	// console.log(tweet.id_str+"::"+tweet.text +"::"+tweet.user.screen_name+"("+tweet.user.url+")"+"::"+tweet.created_at+"::"+tweet.user.time_zone);
-	/*
+	
 	if(tweet.favorited!="false")
 		{
 		console.log('in if');
@@ -65,7 +65,7 @@ if(!err){
         }
 	
 	});
-		}*/ //Favorite if close
+		}
 	}
 }
 else{
@@ -102,7 +102,7 @@ if(!darktechieErr){
 	});
 	
 
-  myBot.post('statuses/update', {in_reply_to_status_id: darkTweet.id_str,status:'@darktechie is watching this tweet @darktechie'}, function(error, response){
+ /* myBot.post('statuses/update', {in_reply_to_status_id: darkTweet.id_str,status:'@darktechie is watching this tweet @darktechie'}, function(error, response){
         // if there was an error while 'favorite'
         if(error){
        console.log('CANNOT BE replied... Error'+error);
@@ -111,7 +111,7 @@ if(!darktechieErr){
         //  console.log('replied... Success!!!');
         }
 	
-	});
+	});*/
 
 
 		}
