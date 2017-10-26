@@ -4,7 +4,7 @@
   "description": "This example is so cool.",
   "main": "index.js",
   "scripts":{
-  "start":"node index.js > out.log"},
+  "start":"node index.js"},
   "keywords": [
     "example",
     "heroku"
