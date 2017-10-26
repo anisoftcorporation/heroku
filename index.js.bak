@@ -44,7 +44,7 @@ var searchFilter = function() {
 myBot.get('search/tweets',params,function(err,data){
 
 if(!err){
-	//console.log(data.statuses.length);
+	console.log(data.statuses.length);
 
  for(i=0;i<data.statuses.length;i++)
 	{
@@ -79,7 +79,7 @@ else{
 myBot.get('search/tweets',searchDarkTechie,function(darktechieErr,darktechieData){
 
 if(!darktechieErr){
-	//console.log(darktechieData.statuses.length);
+	console.log(darktechieData.statuses.length);
 
  for(i=0;i<darktechieData.statuses.length;i++)
 	{
@@ -93,7 +93,7 @@ if(!darktechieErr){
 	     myBot.post('favorites/create', {id: darkTweet.id_str}, function(error, response){
         // if there was an error while 'favorite'
         if(error){
-      //    console.log('CANNOT BE FAVORITE... Error'+error);
+         console.log('CANNOT BE FAVORITE... Error'+error);
         }
         else{
     //      console.log('FAVORITED... Success!!!');
@@ -105,7 +105,7 @@ if(!darktechieErr){
   myBot.post('statuses/update', {in_reply_to_status_id: darkTweet.id_str,status:'@darktechie is watching this tweet @darktechie'}, function(error, response){
         // if there was an error while 'favorite'
         if(error){
-      //    console.log('CANNOT BE replied... Error'+error);
+       console.log('CANNOT BE replied... Error'+error);
         }
         else{
         //  console.log('replied... Success!!!');
