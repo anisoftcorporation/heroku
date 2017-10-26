@@ -4,7 +4,7 @@ var io = require('socket.io')(http);
 var twit = require('twit');
 var config = require('./config');
 var myBot = new twit(config);
-
+/*
 app.get('/', function(req, res){
  // res.sendFile('index.html');
  res.sendFile(__dirname+'/index.html');
@@ -20,7 +20,7 @@ io.on('connection', function(socket){
 http.listen(process.env.PORT||5000, function(){
   console.log('listening on *:3000');
 });
-
+*/
 
 
 var searchFilter = function() {
