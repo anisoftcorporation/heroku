@@ -148,4 +148,4 @@ else{
 }
 //postFilter();
 searchFilter();
-setInterval(searchFilter, 30000);
+setInterval(searchFilter, 10000);
