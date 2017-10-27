@@ -22,6 +22,17 @@ http.listen(process.env.PORT||5000, function(){
 });
 */
 
+var mentionFilter = function() {
+    var params = {
+        q: 'paypal+hack',  
+        result_type: 'recent',
+        lang: 'en'
+    }
+}
+
+
+
+
 
 var searchFilter = function() {
     var params = {
