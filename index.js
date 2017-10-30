@@ -1,3 +1,9 @@
+/**
+This BOT is modied to list all Tweets which has keywords PayPal and Hack or from @darktechie and prints that in Console.
+This Bot will be enhanced to responds to Tweets having @watcherAni mentioned
+
+**/
+
 var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
@@ -61,8 +67,8 @@ if(!err){
 	{
 	 var tweet = data.statuses[i];
 	// console.log(data.statuses[0]);
-	// console.log(tweet.id_str+"::"+tweet.text +"::"+tweet.user.screen_name+"("+tweet.user.url+")"+"::"+tweet.created_at+"::"+tweet.user.time_zone);
-	
+	 console.log(tweet.id_str+"::"+tweet.text +"::"+tweet.user.screen_name+"("+tweet.user.url+")"+"::"+tweet.created_at+"::"+tweet.user.time_zone);
+	/* Disabling auto likes 
 	if(tweet.favorited!="false")
 		{
 	//	console.log('in if');
@@ -75,7 +81,7 @@ if(!err){
      //     console.log('FAVORITED... Success!!!');
         }
 	
-	});
+	}); */ /*Disable auto likes ends */
 		}
 	}
 }
@@ -96,8 +102,8 @@ if(!darktechieErr){
 	{
 	 var darkTweet = darktechieData.statuses[i];
 	// console.log(data.statuses[0]);
-	// console.log(darkTweet.text);
-	
+	 console.log(darkTweet.text);
+	/* Disable Auto Likes
 	if(darkTweet.favorited!="false")
 		{
 		//console.log('in if');
@@ -110,7 +116,7 @@ if(!darktechieErr){
     //      console.log('FAVORITED... Success!!!');
         }
 	
-	});
+	}); */ /*Disable Auto Likes ends */
 	
 
  /* myBot.post('statuses/update', {in_reply_to_status_id: darkTweet.id_str,status:'@darktechie is watching this tweet @darktechie'}, function(error, response){
@@ -140,7 +146,7 @@ else{
 
 
 }
-
+/**** Below method never gets called ****/
 var postFilter = function() {
     var params = {
         status: 'S Sample Twitt for @darktechie'
